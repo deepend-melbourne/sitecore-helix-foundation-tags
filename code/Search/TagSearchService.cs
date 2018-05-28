@@ -1,17 +1,16 @@
-using Sitecore.Foundation.DependencyInjection;
 using System.Linq;
-using Glass.Mapper.Sc;
-using Sitecore.Data.Items;
-using Sitecore.Foundation.Indexing.Search;
-using Sitecore.Foundation.Tags.Model;
 using Sitecore.ContentSearch.Linq.Utilities;
+using Sitecore.Foundation.DependencyInjection;
+using Sitecore.Foundation.Indexing.Services;
+using Sitecore.Foundation.Tags.Model;
 
 namespace Sitecore.Foundation.Tags.Search
 {
     [Service]
     public class TagSearchService : SearchService<TagSearchResultItem, TagSearchRequest, ITag>
     {
-        public TagSearchService(ISitecoreService sitecoreService) : base(sitecoreService)
+        public TagSearchService(DefaultSitecoreService sitecoreService)
+            : base(sitecoreService)
         {
         }
 
@@ -25,7 +24,6 @@ namespace Sitecore.Foundation.Tags.Search
             return query;
         }
 
-
         private IQueryable<TagSearchResultItem> ApplyTagNamePredicate(IQueryable<TagSearchResultItem> query, string[] tagNames)
         {
             var expression = PredicateBuilder.False<TagSearchResultItem>();
@@ -36,11 +34,6 @@ namespace Sitecore.Foundation.Tags.Search
             }
 
             return query.Where(expression);
-        }
-
-        protected override ITag GlassCast(Item item)
-        {
-            return SitecoreService.Cast<ITag>(item);
         }
     }
 }

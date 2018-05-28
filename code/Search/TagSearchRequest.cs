@@ -1,4 +1,4 @@
-using Sitecore.Foundation.Indexing.Search;
+using Sitecore.Foundation.Indexing.Search.Models;
 
 namespace Sitecore.Foundation.Tags.Search
 {
