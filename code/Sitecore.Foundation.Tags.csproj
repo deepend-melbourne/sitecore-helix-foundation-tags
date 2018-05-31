@@ -37,7 +37,9 @@
     <Content Include="Views\**\*.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\IHasTags.cs" />
     <Compile Include="Model\ITag.cs" />
+    <Compile Include="Model\TaggedIndexedItem.cs" />
     <Compile Include="Search\TagSearchRequest.cs" />
     <Compile Include="Search\TagSearchResultItem.cs" />
     <Compile Include="Search\TagSearchService.cs" />
