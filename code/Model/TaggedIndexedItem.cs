@@ -9,5 +9,8 @@ namespace Sitecore.Foundation.Tags.Model
     {
         [IndexField("tags_sm")]
         public IEnumerable<Guid> Tags { get; set; }
+
+        [IndexField("tag_names_sm")]
+        public IEnumerable<string> TagNames { get; set; }
     }
 }

@@ -44,6 +44,7 @@
     <Compile Include="Search\TagSearchResultItem.cs" />
     <Compile Include="Search\TagSearchService.cs" />
     <Compile Include="Templates.cs" />
+    <Compile Include="Infrastructure\Fields\TagNamesComputedField.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -84,6 +85,14 @@
       <Project>{2BFF662C-B247-48D7-8648-56A9F6824B1B}</Project>
       <Name>Sitecore.Foundation.Models</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\SitecoreExtensions\code\Sitecore.Foundation.SitecoreExtensions.csproj">
+      <Project>{B535703F-8D07-4F23-A533-2974BB4CC7B1}</Project>
+      <Name>Sitecore.Foundation.SitecoreExtensions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Infrastructure\" />
+    <Folder Include="Infrastructure\Fields\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\Deepend.build.dotnet.props" />
