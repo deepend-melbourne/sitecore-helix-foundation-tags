@@ -10,6 +10,7 @@ namespace Sitecore.Foundation.Tags.Infrastructure.Fields
     public class TagNamesComputedField : IComputedIndexField
     {
         public string FieldName { get; set; }
+
         public string ReturnType { get; set; }
 
         public object ComputeFieldValue(IIndexable indexable)

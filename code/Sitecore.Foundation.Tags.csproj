@@ -73,19 +73,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\DependencyInjection\code\Sitecore.Foundation.DependencyInjection.csproj">
+    <ProjectReference Include="..\..\DependencyInjection\code\Sitecore.Foundation.DependencyInjection.9.0.171219.csproj">
       <Project>{366148B7-2392-4F42-80D6-786B7A3682AE}</Project>
       <Name>Sitecore.Foundation.DependencyInjection</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Indexing\code\Sitecore.Foundation.Indexing.csproj">
+    <ProjectReference Include="..\..\Indexing\code\Sitecore.Foundation.Indexing.9.0.171219.csproj">
       <Project>{80213F24-577F-4F0B-A3B8-62485EA4D2F3}</Project>
       <Name>Sitecore.Foundation.Indexing</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Models\code\Sitecore.Foundation.Models.csproj">
+    <ProjectReference Include="..\..\Models\code\Sitecore.Foundation.Models.9.0.171219.csproj">
       <Project>{2BFF662C-B247-48D7-8648-56A9F6824B1B}</Project>
       <Name>Sitecore.Foundation.Models</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\SitecoreExtensions\code\Sitecore.Foundation.SitecoreExtensions.csproj">
+    <ProjectReference Include="..\..\SitecoreExtensions\code\Sitecore.Foundation.SitecoreExtensions.9.0.171219.csproj">
       <Project>{B535703F-8D07-4F23-A533-2974BB4CC7B1}</Project>
       <Name>Sitecore.Foundation.SitecoreExtensions</Name>
     </ProjectReference>
