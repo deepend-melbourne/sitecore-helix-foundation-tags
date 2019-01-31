@@ -4,6 +4,10 @@ Parent: "d5f1a828-895a-4ce0-93ae-125b0dd87252"
 Template: "e269fbb5-3750-427a-9149-7aa950b49301"
 Path: /sitecore/templates/Foundation/Tags/_HasTags/Tags
 DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 1100
 Languages:
 - Language: en
   Versions:
