@@ -24,6 +24,11 @@ namespace Sitecore.Foundation.Tags.Search
             return query;
         }
 
+        protected override IQueryable<TagSearchResultItem> ApplyFacets(IQueryable<TagSearchResultItem> query, TagSearchRequest request)
+        {
+            return query;
+        }
+
         private IQueryable<TagSearchResultItem> ApplyTagNamePredicate(IQueryable<TagSearchResultItem> query, string[] tagNames)
         {
             var expression = PredicateBuilder.False<TagSearchResultItem>();
