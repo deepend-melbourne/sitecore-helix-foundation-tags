@@ -33,9 +33,17 @@ namespace Sitecore.Foundation.Tags.Search
         {
             var expression = PredicateBuilder.False<TagSearchResultItem>();
 
-            foreach (var tagName in tagNames)
+            var normalisedTags = (tagNames ?? Enumerable.Empty<string>())
+                .Select(tag => tag?.ToLower() ?? string.Empty)
+                .Where(tag => !string.IsNullOrEmpty(tag))
+                .ToList();
+
+            if (normalisedTags.Any())
             {
-                expression = expression.Or(i => i.Name == tagName);
+                foreach (var tagName in tagNames)
+                {
+                    expression = expression.Or(i => i.Name == tagName);
+                }
             }
 
             return query.Where(expression);

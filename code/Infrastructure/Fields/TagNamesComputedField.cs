@@ -30,6 +30,8 @@ namespace Sitecore.Foundation.Tags.Infrastructure.Fields
                     return item
                         .GetMultiListValueItems(Templates.HasTag.Fields.Tags)
                         .Select(tag => string.IsNullOrEmpty(tag.DisplayName) ? tag.Name : tag.DisplayName)
+                        .Where(tag => !string.IsNullOrEmpty(tag))
+                        .Select(tag => tag.ToLower())
                         .ToArray();
                 }
 
