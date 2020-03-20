@@ -1,4 +1,5 @@
 using System.Linq;
+using Glass.Mapper.Sc;
 using Sitecore.ContentSearch.Linq.Utilities;
 using Sitecore.Foundation.DependencyInjection;
 using Sitecore.Foundation.Indexing.Services;
@@ -9,7 +10,7 @@ namespace Sitecore.Foundation.Tags.Search
     [Service]
     public class TagSearchService : SearchService<TagSearchResultItem, TagSearchRequest, ITag>
     {
-        public TagSearchService(DefaultSitecoreService sitecoreService)
+        public TagSearchService(ISitecoreService sitecoreService)
             : base(sitecoreService)
         {
         }
